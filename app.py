@@ -32,15 +32,15 @@ if bar_button: # Al hacer clic en el botón
 st.header("Condición del auto vs. Año del auto")
 hist_button = st.button('Construir histograma')
 if hist_button:
-    st.write('Creación del histograma para observar las condiciones respecto al año de fabricación de los autos')
+    st.write('Histograma para observar las condiciones respecto al año de fabricación de los autos')
     # Crear y mostrar el histograma
-    fig = px.histogram(car_data, x="model_year", color="condition") # , title="Histograma de condición vs año del auto"
-    st.plotly_chart(fig, use_container_width=True)
+    fig_2 = px.histogram(car_data, x="model_year", color="condition") # , title="Histograma de condición vs año del auto"
+    st.plotly_chart(fig_2, use_container_width=True)
 
 st.header("Kilometraje marcado vs Precio")
 scatt_button = st.checkbox('Construir Gráfico de Dispersión')
 if scatt_button:
-    st.write('Creación del gráfico de dispersión para observar la relación del kilometraje marcado en el odómetro y el precio de venta de los autos')
+    st.write('Gráfico de dispersión para observar la relación del kilometraje marcado en el odómetro y el precio de venta de los autos')
     # Crear y mostrar el gráfico de dispersión
-    fig = px.scatter(car_data, x="odometer", y="price")
-    st.plotly_chart(fig, use_container_width=True)
+    fig_3 = px.scatter(car_data, x="odometer", y="price")
+    st.plotly_chart(fig_3, use_container_width=True)
